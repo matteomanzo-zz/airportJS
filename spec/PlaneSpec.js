@@ -12,4 +12,5 @@ describe('Plane', function() {
     plane.land();
     expect(plane.isFlying()).toBe(false);
   });
+
 });
