@@ -18,4 +18,9 @@ describe('Plane', function() {
     plane.takeOff();
     expect(plane.isFlying()).toBe(true);
   });
+
+  it('cannot take off if it is already flying', function() {
+    plane.takeOff();
+    expect(function() {plane.takeOff()}).toThrow('You are flying already!')
+  });
 });
