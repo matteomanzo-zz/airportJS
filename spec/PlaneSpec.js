@@ -20,7 +20,11 @@ describe('Plane', function() {
   });
 
   it('cannot take off if it is already flying', function() {
-    plane.takeOff();
-    expect(function() {plane.takeOff()}).toThrow('You are flying already!')
+    expect(function() { plane.takeOff() }).toThrow(new Error('You are already flying!'))
+  });
+
+  it('cannot land if it is not flying', function() {
+    plane.land();
+    expect(function() { plane.land() }).toThrow(new Error('You are not flying!'))
   });
 });
