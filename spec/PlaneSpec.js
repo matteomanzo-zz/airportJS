@@ -5,11 +5,11 @@ describe('Plane', function() {
   });
 
   it('is flying when created', function() {
-    expect(plane.flying).toBe(true);
+    expect(plane.isFlying()).toBe(true);
   });
-  //
-  // it('can land', function() {
-  //   plane.land();
-  //   expect(plane.isFlying()).toBe(false);
-  // });
+
+  it('can land', function() {
+    plane.land();
+    expect(plane.isFlying()).toBe(false);
+  });
 });
