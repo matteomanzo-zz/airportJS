@@ -13,4 +13,9 @@ describe('Plane', function() {
     expect(plane.isFlying()).toBe(false);
   });
 
+  it('can take off', function() {
+    plane.land();
+    plane.takeOff();
+    expect(plane.isFlying()).toBe(true);
+  });
 });

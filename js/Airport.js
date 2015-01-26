@@ -1,3 +1,7 @@
 var Airport = function() {
-  this.planes = 0;
+  this.planes = [];
+};
+
+Airport.prototype.dock = function(plane) {
+  this.planes.push(plane)
 };
